@@ -50,9 +50,6 @@ app.get("/create-checkout-session", function (req, res){
 // new post
 app.post("/create-checkout-session", async (req, res) => {
 
-  await console.log(req.body)
-  await console.log(req.body.items)
-
 
 
 
@@ -96,7 +93,6 @@ app.get("/cancel", function(req, res) {
 });
 
 app.post("/goHome", function(req, res) {
-  console.log("clicked");
   res.redirect('/');
 });
 
