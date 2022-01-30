@@ -4,6 +4,7 @@ const ejs = require('ejs');
 const bodyParser = require('body-parser');
 const path = require('path');
 const fs = require('fs');
+// const cors = require('cors');
 
 const app = express();
 
@@ -44,7 +45,7 @@ app.get("/", function(req, res) {
 let url;
 
 app.get("/create-checkout-session", function (req, res){
-
+  // console.log(url);
 });
 
 // new post
