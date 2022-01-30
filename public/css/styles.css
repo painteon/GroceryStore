@@ -25,6 +25,12 @@ a{
   color: #BF8B67;
 }
 
+span{
+  color: #483434;
+  text-decoration: underline;
+  text-decoration-color: #557C55;
+}
+
 a:hover{
   color: #A6CF98 !important;
 }
@@ -261,6 +267,7 @@ a:active{
   background-color: #EFEFEF;
   height: 88px;
   transition: all 3s ease;
+  width: 100%;
 }
 
 .nav-cart{
