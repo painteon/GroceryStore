@@ -627,6 +627,7 @@ a:active{
 .card-decorations:active{
   background-color: #66806A;
   color: #483434;
+  transition: background-color .1s, color .1s;
 }
 
 .card-decorations-titles{
