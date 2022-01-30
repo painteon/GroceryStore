@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Thanks for your order</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <!-- <script src="https://js.stripe.com/v3/"></script> -->
+    <script src="https://checkout.stripe.com/checkout.js" charset="utf-8"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <div class= "message-box">
+      <div class="nav-logo">
+        <i class="fas fa-leaf enlarge"></i>
+      </div>
+      <p class="message">Success!</p> <br>
+      <p class="message message-2">We appreciate your business!</p>
+      <form action="/goHome" method="post">
+        <button class="message-button" type="submit" name="button">Home</button>
+      </form>
+    </div>
+  </body>
+</html>

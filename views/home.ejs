@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://checkout.stripe.com/checkout.js" charset="utf-8"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+
+  </head>
+  <body id="home" onload="pageAnimation()">
+
+    <nav class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-leaf box" onclick="compliment()"></i>
+        <h1 class="box_logo">Evergreen</h1>
+        <div class="box-box">
+          <h1>Compliment of the day</h1>
+          <p></p>
+        </div>
+      </div>
+      <div class="nav-links">
+        <h2 class="nav-item"><a href="#home">Home</a></h2>
+        <h2 class="nav-item"><a href="#about">About</a></h2>
+        <h2 class="nav-item"><a href="#store">Store</a></h2>
+      </div>
+      <div class="nav-cart">
+      <form class="" action="/create-checkout-session" method="post">
+        <div onclick="openCart()" class="box-2">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <div id="cart" class="shopping-cart">
+          <div class="shopping-cart-basket">
+            <p class="card-decorations-titles fix-width">Cart</p>
+          </div>
+          <div class="shop-total-div">
+            <p class="shopping-cart-total">Total: <span class="shopping-cart-number">$0.00</span> </p>
+          </div>
+          <div class="pay">
+            Checkout
+          </div>
+        </div>
+      </form>
+      </div>
+    </nav>
+
+    <section class="carosel-container">
+      <div class="">
+        <img class="carosel-images image-identifier" src="pictures/apples.jpg" alt="apples">
+        <img class="carosel-images image-identifier hide-image" src="pictures/lady.jpg" alt="lady">
+        <img class="carosel-images image-identifier hide-image" src="pictures/store.jfif" alt="store">
+      </div>
+      <div class="">
+        <img class="carosel-images image-identifier-2" src="pictures/bananas.jpg" alt="bananas">
+        <img class="carosel-images image-identifier-2 hide-image" src="pictures/lady2.jpg" alt="store2">
+        <img class="carosel-images image-identifier-2 hide-image" src="pictures/store2.jpg" alt="lady2">
+      </div>
+    </section>
+
+    <section class="container">
+      <h1 class="sub-titles" id="store">Store</h3>
+
+      <div class="grid-containers-store">
+        <div class="grid-cards-store">
+          <h1 class="hover-text">Vegetables</h1>
+          <i onclick="showPrices()" class="fas fa-chevron-left back-button"></i>
+          <i onclick="showPrices()" class="fas fa-plus back-button forward-button"></i>
+          <div class="price-text">
+            <p class="card-decorations-titles">Items</p>    <p class="card-decorations-titles">Prices</p>
+            <% items.vegetables.forEach(function(item) { %>
+              <p class="card-decorations card-decorations-id" data-item-id= "<%= item.id %>"><i class="add fas fa-plus"></i><%= item.name %></p>    <p class=""><%= item.price %></p>
+            <% }) %>
+          </div>
+          <img id="vegetables" class="grid-images" src="pictures/vegetables.jpg" alt="vegetables-pic">
+        </div>
+        <div onclick="showPrices()" class="grid-cards-store-2">
+          <h1 class="hover-text">Meats</h1>
+          <i onclick="showPrices()" class="fas fa-chevron-left back-button"></i>
+          <i onclick="showPrices()" class="fas fa-plus back-button forward-button"></i>
+          <div class="price-text">
+            <p class="card-decorations-titles">Items</p>    <p class="card-decorations-titles">Prices</p>
+            <% items.meats.forEach(function(item) { %>
+              <p class="card-decorations card-decorations-id" data-item-id= "<%= item.id %>"><i class="add fas fa-plus"></i><%= item.name %></p>    <p class=""><%= item.price %></p>
+            <% }) %>
+          </div>
+          <img id="meats" class="grid-images" src="pictures/meats.jpg" alt="meats-pic">
+        </div>
+        <div onclick="showPrices()" class="grid-cards-store">
+          <h1 class="hover-text">Diary</h1>
+          <i onclick="showPrices()" class="fas fa-chevron-left back-button"></i>
+          <i onclick="showPrices()" class="fas fa-plus back-button forward-button"></i>
+          <div class="price-text">
+            <p class="card-decorations-titles">Items</p>    <p class="card-decorations-titles">Prices</p>
+            <% items.dairy.forEach(function(item) { %>
+              <p class="card-decorations card-decorations-id" data-item-id= "<%= item.id %>"><i class="add fas fa-plus"></i><%= item.name %></p>    <p class=""><%= item.price %></p>
+            <% }) %>
+          </div>
+          <img id="dairy" class="grid-images" src="pictures/dairy.jpg" alt="dairy-pic">
+        </div>
+        <div onclick="showPrices()" class="grid-cards-store-2">
+          <h1 class="hover-text">Breads</h1>
+          <i onclick="showPrices()" class="fas fa-chevron-left back-button"></i>
+          <i onclick="showPrices()" class="fas fa-plus back-button forward-button"></i>
+          <div class="price-text">
+            <p class="card-decorations-titles">Items</p>    <p class="card-decorations-titles">Prices</p>
+            <% items.breads.forEach(function(item) { %>
+              <p class="card-decorations card-decorations-id" data-item-id= "<%= item.id %>"><i class="add fas fa-plus"></i><%= item.name %></p>    <p class=""><%= item.price %></p>
+            <% }) %>
+          </div>
+          <img id="breads" class="grid-images" src="pictures/breads.jpg" alt="breads-pic">
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h1 class="sub-titles" id="about">About</h3>
+
+        <div class="grid-containers-about">
+          <div class="grid-cards-about">
+            <h4 class= "about_title">Community Interaction</h4>
+            <p class= "about_info">We are an up and coming Neighborhood store with quality groceries, ingredients, and produce</p>
+            <p class= "about_info">All of our produce is sourced directly from known and loved Local farmers in the immediate area</p>
+            <p class= "about_info">Our friendly staff are here to guide you in anyway they can help. Come on Down!</p>
+          </div>
+          <div class="grid-cards-about-2">
+            <h4 class= "about_title">Contact us</h4>
+            <p class= "about_info">Phone: 555-555-5555</p>
+            <p class= "about_info">Email: Evergreen@gmail.com</p>
+            <p class= "about_info">Let us know know how we assits you more!</p>
+          </div>
+          <div class="grid-cards-about">
+            <h4 class= "about_title">Share with others!</h4>
+            <p class= "about_info">Facebook: www.facebook.com/EverGreen</p>
+            <p class= "about_info">Twitter: www.twitter.com/Evergreen</p>
+          </div>
+          <div class="grid-cards-about-2">
+            <h4 class= "about_title">FAQ's</h4>
+            <p class= "about_info">Q: When are you open?</p>
+            <p class= "about_info">A: 8 AM - 8PM</p>
+            <p class= "about_info">Q: Where can I apply to join the Evergreen Team?</p>
+            <p class= "about_info">A: Applications will be avilable on the service desk in the store. We are currently working on the website implimentation of it to stream line.</p>
+          </div>
+        </div>
+    </section>
+
+  </body>
+  <footer class = "footer">
+    <h1 class="footer_1">Evergreen</h1>
+    <p class="footer_2">Copyright &#169 <%= year %></p>
+  </footer>
+  <script src="index.js" charset="utf-8" ></script>
+</html>
