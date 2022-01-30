@@ -1,0 +1,130 @@
+{
+  "vegetables": [
+    {
+      "id": 1,
+      "name": "Green beans:",
+      "price": "$2.00 per lb"
+    },
+    {
+      "id": 2,
+      "name": "Bell Peppers:",
+      "price": "$1.00 per item"
+    },
+    {
+      "id": 3,
+      "name": "Carrots:",
+      "price": "$3.00 per bundle"
+    },
+    {
+      "id": 4,
+      "name": "Lettuce:",
+      "price": "$3.00 per item"
+    },
+    {
+      "id": 5,
+      "name": "Onions:",
+      "price": "$2.00 per lb"
+    },
+    {
+      "id": 6,
+      "name": "Tomatoes:",
+      "price": "$1.00 per item"
+    }
+  ],
+  "meats": [
+    {
+      "id": 7,
+      "name": "Whole Chicken:",
+      "price": "$6.00 per item"
+    },
+    {
+      "id": 8,
+      "name": "Sliced chicken:",
+      "price": "$9.00 per tray"
+    },
+    {
+      "id": 9,
+      "name": "Beef:",
+      "price": "$12.00 per tray"
+    },
+    {
+      "id": 10,
+      "name": "Sliced Beef:",
+      "price": "$15.00 per tray"
+    },
+    {
+      "id": 11,
+      "name": "Pork:",
+      "price": "$12.00 per tray"
+    },
+    {
+      "id": 12,
+      "name": "Sliced Pork:",
+      "price": "$15.00 tray"
+    }
+  ],
+  "dairy": [
+    {
+      "id": 13,
+      "name": "Whole Milk:",
+      "price": "$3.00 per lb"
+    },
+    {
+      "id": 14,
+      "name": "American Cheese:",
+      "price": "$7.00 per item"
+    },
+    {
+      "id": 15,
+      "name": "Shredded Cheese:",
+      "price": "$5.00 per bundle"
+    },
+    {
+      "id": 16,
+      "name": "Swiss Chesse:",
+      "price": ">$7.00 per item"
+    },
+    {
+      "id": 17,
+      "name": "Goat Cheese:",
+      "price": "$9.00 per lb"
+    },
+    {
+      "id": 18,
+      "name": "Cream:",
+      "price": "$4.00 per item"
+    }
+  ],
+  "breads":[
+    {
+      "id": 19,
+      "name": "White Bread:",
+      "price": "$3.00 per lb"
+    },
+    {
+      "id": 20,
+      "name": "Wheat Bread:",
+      "price": "$4.00 per item"
+    },
+    {
+      "id": 21,
+      "name": "Potatoe Bread:",
+      "price": "$3.00 per bundle"
+    },
+    {
+      "id": 22,
+      "name": "Wonder Bread:",
+      "price": "$4.00 per item"
+    },
+    {
+      "id": 23,
+      "name": "Hot Dog Bread:",
+      "price": "$2.00 per lb"
+    },
+    {
+      "id": 24,
+      "name": "Sandwhich Bread:",
+      "price": "$3.00 per item"
+    }
+  ]
+}
